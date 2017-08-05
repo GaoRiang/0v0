@@ -8,6 +8,7 @@
     * 了解c语言程序的从文本代码到二进制可执行文件的编译过程
     * 了解gcc指令一些参数的作用，与上面有关
     * 了解文件描述符
+    * 了解了大端小端,x86是小端。内存地址左低右高，小端低位字节在低地址。1字节8位。
 + 7.28
     * 对寄存器做了一些了解
         + 32位寄存器 变量
@@ -56,7 +57,6 @@
             + leave: %rsp=%rbp;popq %rbp
         3. [Intel x86 Function-call Conventions - Assembly View](http://www.unixwiz.net/techtips/win32-callconv-asm.html)
 
-    
 + 7.31
     * 看lab1的ex1-2(发现实验的练习很难……所以结合别人的博客来看)
 + 8.01
@@ -71,7 +71,7 @@
     
 + 8.03
     * 堆栈，是一种数据结构，程序的内存分配，包括stack，heap，static，text（文本常量区），二进制代码区，有栈基指针和栈顶指针，高-->低。利用pop和push实现后进先出。
-    * 同一台电脑配置2个github账号的方法：
+    * 成功实现同一台电脑配置2个github账号：
         ```
         1:$ ssh-keygen -t rsa -C "your-email-address"
 
@@ -103,3 +103,14 @@
         $ git config  user.name "xxxx"
         $  git clone git@github_work:xxxx/test
         ```
+    * DMA:从磁盘直接到内存存取，不经过处理器
+    * SRAM DRAM：
+        + SRAM 静态存取功能，不用刷新电路。cpu与主存之间的高速缓存。L1Cache在cpu内部，访问速度和访问寄存器文件一样快，L2Cache在cpu外部。
+        + DRAM 动态随机存取，刷新电路才能保存数据。也就是平时所说的内存。
+    * 看完csapp第一章
+
++ 8.04-8.05
+    * 浮点数不可结合运算
+    * [布尔代数入门](http://www.ruanyifeng.com/blog/2016/08/boolean-algebra.html)
+    * 布尔代数不太懂
+    * 看完csapp第2章，尽量理解并基本有做每一节后面的习题，章末习题未做
